@@ -2,8 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Post model
 class Post extends Model {
-  static tComment(body, models) {
-    return models.Comment.create({
+  static upvote(body, models) {
+    return models.Vote.create({
       user_id: body.user_id,
       post_id: body.post_id
     }).then(() => {

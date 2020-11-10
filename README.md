@@ -30,8 +30,8 @@ sequelize ^6.3.5
 
 ## Link to deployed application
 
-[Link to deployed Heroku application]()
+[Link to deployed Heroku application](https://germ-stoppers-backend.herokuapp.com)
 
 ## GitHub
 
-[Link to Github repo]()
+[Link to Github repo](https://github.com/vutanguofa/germ-stoppers-backend)
