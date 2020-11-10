@@ -1,0 +1,27 @@
+<section>
+  <h2>New Order</h2>
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Customer Name</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">Select Package</label>
+      <select name="post-url" id="post-url">
+        <optgroup label="Regular Orders">
+          <option value="50 Masks - $15.99">50 Masks - $15.99</option>
+          <option value="100 Masks - $29.99">100 Masks - $29.99</option>
+          <option value="200 Masks - $39.99">200 Masks - $39.99</option>
+        </optgroup>
+        <optgroup label="Bulk Orders">
+          <option value="5000 Masks - $499.99">5000 Masks - $499.99</option>
+          <option value="10000 Masks - $799.99">10000 Masks - $799.99</option>
+          <option value="20000 Masks - $1200.00">20000 Masks - $1200.99</option>
+        </optgroup>
+      </select>
+    </div>
+    <button type="submit" class="btn">Create Order</button>
+  </form>
+</section>
+
+<script src="/javascript/add-post.js"></script>

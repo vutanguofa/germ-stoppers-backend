@@ -1,0 +1,11 @@
+<h2>Sales History</h2>
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post }}
+    <a href="/salesHistory/edit/{{post.id}}" class="edit-link">Edit Order</a>
+  </li>
+  {{/each}}
+</ol>
+
+<script src="/javascript/add-post.js"></script>

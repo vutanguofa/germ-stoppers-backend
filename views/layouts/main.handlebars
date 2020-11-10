@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Germ Stoppers</title>
+  <link rel="stylesheet" href="/stylesheets/foundation.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">GERM STOPPERS</li>
+          {{#if loggedIn}}
+          <li><a href="/newOrder">New Order</a></li>
+          <li><a href="/processPayments">Process Payments</a></li>
+          <li><a href="/newAdmin">New Admin</a></li>
+          <li><a href="/salesHistory">Sales History</a></li>
+          <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+          <li><a href="/login">Admin Login</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <!-- Footer with copyright -->
+    <footer class="callout margin-footer">
+      <ul class="menu simple">
+        <li><a>&copy 2020 GERM STOPPERS</a></li>
+        <li><a>Developers: Abel Estrada, Vu Tang</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+  
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
