@@ -1,0 +1,11 @@
+<article class="post">
+  
+  <div class="title boldi">
+    {{title}}<br />
+  </div>
+  <div class="meta">
+    Order created on: <span class="boldi2">{{format_date created_at}}</span>, by <span class="boldi2">{{user.username}}</span><br />
+    Order details: <span class="boldi2">{{post_url}}</span><br />
+    <a href="/post/{{id}}">{{format_plural "Addt’l Detail" comments.length}} ({{comments.length}})</a>
+  </div>
+</article>
