@@ -26,7 +26,9 @@ sequelize ^6.3.5
 ```
 
 ## Demo of backend
+![](https://user-images.githubusercontent.com/68674610/98868637-b0024880-242d-11eb-8673-9daf33cbd6d6.png)
 ![](https://user-images.githubusercontent.com/68674610/98868150-eb504780-242c-11eb-9dc7-7570819d4a26.png)
+![](https://user-images.githubusercontent.com/68674610/98868671-bc86a100-242d-11eb-96ce-4bfbb91c6089.png)
 
 ## Link to deployed application
 
