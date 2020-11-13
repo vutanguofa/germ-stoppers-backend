@@ -1,7 +1,7 @@
 # Germs Stoppers Backend Office
 
 ## Description
-This repo includes a working backend office to allow users to manage orders. It includes the option to create manual orders, edit orders, and create new users (admin). Using the Briantree node library, we were able to include an API to process manual payments as part of day-to-day operations.
+This repo includes a working backend office to allow users to manage orders. It includes the option to create manual orders, edit orders, and create new users (admin). Using the Briantree node library to fulfill the "new" library requirement, we were able to include an API to process manual payments as part of day-to-day operations.
 
 ## Table of Contents
 
@@ -26,9 +26,10 @@ sequelize ^6.3.5
 ```
 
 ## Demo of backend
-![](https://user-images.githubusercontent.com/68674610/98868637-b0024880-242d-11eb-8673-9daf33cbd6d6.png)
-![](https://user-images.githubusercontent.com/68674610/98868150-eb504780-242c-11eb-9dc7-7570819d4a26.png)
-![](https://user-images.githubusercontent.com/68674610/98868671-bc86a100-242d-11eb-96ce-4bfbb91c6089.png)
+![](https://user-images.githubusercontent.com/68674610/99117157-7eff5080-25b2-11eb-96fd-583e48669f4e.png)
+![](https://user-images.githubusercontent.com/68674610/99117229-99d1c500-25b2-11eb-9735-e040b0871262.png)
+![](https://user-images.githubusercontent.com/68674610/99117254-a3f3c380-25b2-11eb-8302-e7f718f1a2f2.png)
+![](https://user-images.githubusercontent.com/68674610/99117281-ace49500-25b2-11eb-8b95-66304eb45a8e.png)
 
 ## Link to deployed application
 
