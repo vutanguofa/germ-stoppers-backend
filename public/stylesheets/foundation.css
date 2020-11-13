@@ -5806,3 +5806,50 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
+
+/* Accordion section */
+.accordionDiv {
+  text-align: center;
+  margin: auto;
+}
+
+.accordion {
+  background-color: #eee;
+  text-align: center;
+  margin: auto;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin: auto;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  transition: max-height 0.2s ease-out;
+}

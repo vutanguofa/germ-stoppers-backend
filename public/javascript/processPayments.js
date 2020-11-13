@@ -3,7 +3,20 @@ var button = document.querySelector('#submit-button');
 braintree.dropin.create({
   // Insert your tokenization key here
   authorization: 'sandbox_24zhk5mm_4gsfhbct7jw5rp8w',
-  container: '#dropin-container'
+  container: '#dropin-container',
+  card: {
+    cardholderName: {
+      required: true
+    },
+    overrides: {
+      fields: {
+        number: {
+          placeholder: '4111-1111-1111-1111',
+          formatInput: true // Turn off automatic formatting
+        }
+      }
+    }
+  }
 }, function (createErr, instance) {
   button.addEventListener('click', function () {
     instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
@@ -31,7 +44,8 @@ braintree.dropin.create({
 
         if (result.success) {
           console.log(result);
-          $('#checkout-message').html('<h1>Approved!</h1><p>Transaction ID: ' + result.transaction.id + '</p>');
+          $('#checkout-message').html('<h1>Approved!</h1><p>Card holder name: ' + result.transaction.creditCard.cardholderName + '<br />Transaction amount: ' + result.transaction.amount + '<br />Transaction ID: ' + result.transaction.id + '</p>');
+          $('#retry').html('<a href="/processPayments">Process New Payment</a>');
         } else {
           console.log(result);
           $('#checkout-message').html('<h1>Error</h1><p>' + result.message + '</p>');
