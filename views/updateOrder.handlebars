@@ -1,0 +1,26 @@
+<article>
+  <p><a href="/salesHistory"> &larr; Back to Sales History</a></p>
+  <h2>Edit Order</h2>
+  <form class="edit-post-form">
+    <span>(Original customer name: {{post.title}})</span>
+    <input name="post-title" type="text" value="{{post.title}}" />
+    <span>(Original order details: {{post.post_url}})</span>
+    <select name="post-url">
+      <optgroup label="Regular Orders">
+        <option value="50 Masks - $15.99">50 Masks - $15.99</option>
+        <option value="100 Masks - $29.99">100 Masks - $29.99</option>
+        <option value="200 Masks - $39.99">200 Masks - $39.99</option>
+      </optgroup>
+      <optgroup label="Bulk Orders">
+        <option value="5000 Masks - $499.99">5000 Masks - $499.99</option>
+        <option value="10000 Masks - $799.99">10000 Masks - $799.99</option>
+        <option value="20000 Masks - $1200.00">20000 Masks - $1200.99</option>
+      </optgroup>
+    </select>
+    <button type="submit">Update Order</button>
+    <button type="button" class="delete-post-btn">Delete Order</button>
+  </form>
+</article>
+
+<script src="/javascript/updateOrder.js"></script>
+<script src="/javascript/delete-post.js"></script>
