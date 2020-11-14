@@ -52,24 +52,8 @@
 </html> --}}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -84,46 +68,32 @@
 </head>
 
 <body>
-
-  <div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-      <!-- Hamburger icon -->
-      <span></span>
-    </a>
-
-    <div id="menu">
-      <div class="pure-menu">
-        <h3>Germ Stoppers</h3>
-        <ul class="pure-menu-list">
-          {{#if loggedIn}}
-          <li class="pure-menu-item"><a href="/newOrder" class="pure-menu-link">New Order</a></li>
-          <li class="pure-menu-item"><a href="/processPayments" class="pure-menu-link">Payments</a></li>
-          <li class="pure-menu-item"><a href="/salesHistory" class="pure-menu-link">Sales History</a></li>
-          <li class="pure-menu-item"><a href="/newAdmin" class="pure-menu-link">New Admin</a></li>
-          <button id="logout" class="btn-no-style" class="pure-menu-link">Logout</button>
-          {{else}}
-          <li class="pure-menu-item"><a href="/login" class="pure-menu-link">Admin Login</a></li>
-          {{/if}}
-        </ul>
-      </div>
-    </div>
-
-    <div id="main">
-      <div class="header">
-        <h1>Germ Stoppers</h1>
-      </div>
-      <div class="content">
-        <main>
-          {{{ body }}}
-        </main>
-      </div>
-    </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    {{#if loggedIn}}
+    <a href="/newOrder">New Order</a></li>
+    <a href="/processPayments">Payments</a></li>
+    <a href="/salesHistory">Sales History</a></li>
+    <a href="/newAdmin">New Admin</a></li>
+    <button id="logout" class="btn-no-style" class="pure-menu-link">Logout</button>
+    {{else}}
+    <a href="/login" class="pure-menu-link">Admin Login</a></li>
+    {{/if}}
+  </div>
+  <div id="main">
+    <h2>Germ Stoppers</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <main>
+      {{{ body }}}
+    </main>
   </div>
 
+  <script src="/javascript/navigation.js"></script>
+
   {{#if loggedIn}}
-  <script src="/javascript/logout.js" class="pure-menu-link"></script>
+  <script src="/javascript/logout.js"></script>
   {{/if}}
+
 </body>
 
 </html>
