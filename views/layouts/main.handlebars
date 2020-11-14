@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -47,6 +47,83 @@
   <script src="/javascript/logout.js"></script>
   {{/if}}
 
+</body>
+
+</html> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Germ Stoppers</title>
+  <link rel="stylesheet" href="/stylesheets/foundation.css">
+  <!-- includes the Braintree JS client SDK -->
+  <script src="https://js.braintreegateway.com/web/dropin/1.25.0/js/dropin.min.js"></script>
+  <!-- includes jQuery -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+
+    <div id="menu">
+      <div class="pure-menu">
+        <h3>Germ Stoppers</h3>
+        <ul class="pure-menu-list">
+          {{#if loggedIn}}
+          <li class="pure-menu-item"><a href="/newOrder" class="pure-menu-link">New Order</a></li>
+          <li class="pure-menu-item"><a href="/processPayments" class="pure-menu-link">Payments</a></li>
+          <li class="pure-menu-item"><a href="/salesHistory" class="pure-menu-link">Sales History</a></li>
+          <li class="pure-menu-item"><a href="/newAdmin" class="pure-menu-link">New Admin</a></li>
+          <button id="logout" class="btn-no-style" class="pure-menu-link">Logout</button>
+          {{else}}
+          <li class="pure-menu-item"><a href="/login" class="pure-menu-link">Admin Login</a></li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+
+    <div id="main">
+      <div class="header">
+        <h1>Germ Stoppers</h1>
+      </div>
+      <div class="content">
+        <main>
+          {{{ body }}}
+        </main>
+      </div>
+    </div>
+  </div>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js" class="pure-menu-link"></script>
+  {{/if}}
 </body>
 
 </html>
